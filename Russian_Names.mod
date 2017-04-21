@@ -3,4 +3,4 @@ path="mod/Russian_Names"
 tags={
 	"Translation"
 }
-supported_version="1.3.*"
+supported_version="1.5.*"

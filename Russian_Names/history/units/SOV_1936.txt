@@ -165,7 +165,7 @@ units = {
 	#### Leningradskii Voennyii Okrug (Leningrad Military District) -- Leningrad ####
 	# 19ya Strelkoviy Korpus		
 	division= {			
-		name = "16-я Ульяновская стрелк. див.."		
+		name = "16-я Ульяновская стрелк. див."		
 		location = 149
 		division_template = "Стрелковая дивизия"
 		start_experience_factor = 0.2
@@ -1411,7 +1411,7 @@ units = {
 		ship = { name = "Петровкий" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
 		ship = { name = "Шаумян" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
 		# 2ya Flotiliya Esmintsev
-		ship = { name = "Изислав" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Изяслав" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
 		ship = { name = "Калинин" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
 	}	
 	navy = {	
@@ -1531,7 +1531,7 @@ units = {
 
 ### Air Wings
 air_wings = {
-	# ЛВО Aviatsya Komandovaniya -- Leningrad
+	# LVO Aviatsya Komandovaniya -- Leningrad
 	195 = { 
 		# 15ya Istrebitel'nye Aviabrigada
 		fighter_equipment_0 = {
