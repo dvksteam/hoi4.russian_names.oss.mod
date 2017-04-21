@@ -1,0 +1,1755 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Стрелковая дивизия"		# Rifle Division
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		#recon = { x = 0 y = 0 } 		# Recon bn had 16 L tanks, 10 ACs, 1x mot inf co #Eng and recon removed and they seem rather OP. Could revisit if balance changes
+		#engineer = { x = 0 y = 1 } 	# (semi-mot) Engineer bn
+		artillery = { x = 0 y = 0 } 	# Heavy Arty Regiment had 1x 152mm bn + 2x 122mm bn
+	}
+}
+
+division_template = {
+	name = "Горнострелковая дивизия"		# Motor Rifle Division
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }	
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 2 y = 0 }	
+		mountaineers = { x = 2 y = 1 }	
+		mountaineers = { x = 2 y = 2 }	
+		mountaineers = { x = 3 y = 0 }	
+		mountaineers = { x = 3 y = 1 }	
+		mountaineers = { x = 3 y = 2 }	
+	}
+	support = {
+		engineer = { x = 0 y = 0 } 		# Engineer bn
+		artillery = { x = 0 y = 1 } 	# Heavy Arty Regiment had 2x 122mm bn
+	}
+}
+
+division_template = {
+	name = "Мотострелковая дивизия"	# Motor Rifle Division
+											# Note: only represents Moscow Proletariat Division in 1936; after 1938-40, Motor Rifle Divisions had +1 mot regiment (3 bns) 
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+	}
+	support = {
+		#recon = { x = 0 y = 0 } 		# Recon bn had 16x L tanks, 45 ACs #Eng and recon removed and they seem rather OP. Could revisit if balance changes 
+		#engineer = { x = 0 y = 1 } 	# (mot) Engineer bn
+		#light_armor = { x = 0 y = 3 }	# Tank bn had 51 L tanks, 3 ACs - (removed)
+	}
+}
+
+division_template = {
+	name = "Кавалерийская дивизия" 	# Кавалерийская дивизия
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+	#support = {
+	#	light_armor = { x = 0 y = 0 }	# Tank "rgt" of 64 light tanks, 28 ACs - (removed)
+	#}
+}
+
+division_template = {
+	name = "Пограничная дивизия НКВД"			# NKVD Border Guard Division - Garrison units (lolder experience, older equipment)
+
+	regiments = {
+		infantry = { x = 0 y = 0 }	
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = 	{
+		military_police = { x = 0 y = 0 }
+	}
+	priority = 0
+}
+division_template = {
+	name = "Механизированный корпус" 				# Represents regular mechanized corps (4 existed in 1935-38); 
+													# Also represents groups of independent tank, mech brigades of the time, though groups are best represented by tank bge 
+													# (2x M/L tank + 1x mot), and 2x mech bge (2x L tank + 1x mot)
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 1 y = 0 }		
+		light_armor = { x = 1 y = 1 }		
+		light_armor = { x = 1 y = 2 }		
+		motorized = { x = 2 y = 0 }		
+		motorized = { x = 2 y = 1 }	
+		motorized = { x = 2 y = 2 }		
+		motorized = { x = 2 y = 3 }		
+	}
+}
+division_template = {
+	name = "Воздушно-десантная бригада"			# Airborne Brigade
+
+	regiments = {
+		paratrooper = { x = 0 y = 0 }
+		paratrooper = { x = 0 y = 1 }
+	}
+}
+
+### Note: OOB abstracts away the following:
+#	Marine Brigade (3x marine bn), 2 Brigades: Leningrad, Sevastopol
+#	Airborne Brigade (3x paratrooper bn), 1 Brigade: Moscow
+
+
+##### OOB #####
+units = {
+	##### Severno-Zapadnoe TVD (North West Theatre) -- Archangelsk #####				
+	# 1ya Strelkoviy Korpus			
+	division= {			
+		name = "18-я Стрелковая дивизия"		
+		location = 9203
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "54-я Стрелковая дивизия"		
+		location = 142
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "16-я Кавалерийская дивизия"		
+		location = 11181
+		division_template = "Кавалерийская дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+
+	# Directly subordinate to TVD			
+	division= {			
+		name = "67-я Стрелковая дивизия"		
+		location = 3134
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+
+
+	##### Zapadnye TVD (Western Theatre Military District) #####
+	#### Leningradskii Voennyii Okrug (Leningrad Military District) -- Leningrad ####
+	# 19ya Strelkoviy Korpus		
+	division= {			
+		name = "16-я Ульяновская стрелк. див.."		
+		location = 149
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "56-я Московская стрелк. див."		
+		location = 149
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "72-я Туркестанская горнострелк. див."		
+		location = 3151
+		division_template = "Горнострелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division= {			
+		name = "Механизированная группа ЛВО"		
+		location = 3151
+		division_template = "Механизированный корпус"		# 1x Tank Bge, 2x Mekh Bge
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+
+	### Leningraskaya Gruppa Armiya (Leningrad Army Group) -- Leningrad ###
+	#  NKVD Leningradksii Korpus -- NKVD Border Guard and RR units	
+	division= {			
+		name = "1-я Пограничная дивизия НКВД"		
+		location = 6174
+		division_template = "Пограничная дивизия НКВД"		# NKVD -- older equipment, training
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}			
+	division= {			
+		name = "4-я Пограничная дивизия НКВД"		
+		location = 6174
+		division_template = "Пограничная дивизия НКВД"		# NKVD -- older equipment, training
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}			
+	division= {			
+		name = "7-й Механизированный корпус"		
+		location = 6174
+		division_template = "Механизированный корпус"		# 2x Mekh Bge, 1x Mot Bge
+		start_experience_factor = 0.3
+	}
+	# Subordinate to AG
+	division= {			
+		name = "11-й Механизированный корпус"		
+		location = 149
+		division_template = "Механизированный корпус"		# 2x Mekh Bge
+		start_experience_factor = 0.3
+	}
+	
+		
+	#### Belorusskii Voennyii Okrug (Belorussian Military District) -- Velikie Luki, Minsk ####			
+	# 4ya Strelkoviy Korpus
+	division= {			
+		name = "27-я Омская стрелк. див."		
+		location = 104
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "29-я Вятская стрелк. див."		
+		location = 9408
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "33-я Белорусская стрелк. див."		
+		location = 9120
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "1-я Механизированная группа БВО"		
+		location = 126
+		division_template = "Механизированный корпус"		# 3x Mekh Bge
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+
+	# 5ya Strelkoviy Korpus
+	division= {			
+		name = "5-я Витебская стрелк. див."		
+		location = 415
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "48-я Кашино-Тверская стрелк. див."		
+		location = 3310
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "64-я Стрелковая дивизия"		
+		location = 3333
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "2-я Механизированная группа БВО"		
+		location = 11202
+		division_template = "Механизированный корпус"		# 1x Tank Bge, 2x Mekh Bge
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+
+	# 6ya Kavaleriyskiy Korpus
+	division= {			
+		name = "6-я Чонгарская кав. див."		
+		location = 6293
+		division_template = "Кавалерийская дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division= {			
+		name = "36-я Чонгарская кав. див."		
+		location = 6293
+		division_template = "Кавалерийская дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+
+	# 11ya Strelkoviy Korpus
+	division= {			
+		name = "2-я Белорусская стрелк. див."		
+		location = 3219
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "8-я Минская стрелк. див."		
+		location = 6371
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "37-я Стрелковая дивизия"		
+		location = 6220
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+
+	# 3ya Kavaleriyskiy Korpus
+	division= {			
+		name = "7-я Кавалерийская дивизия"		
+		location = 3267
+		division_template = "Кавалерийская дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division= {			
+		name = "11-я Кавалерийская дивизия"		
+		location = 11216
+		division_template = "Кавалерийская дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+
+	# NKVD Belorusskiy Korpus -- NKVD Border Guard and RR units	
+	division= {			
+		name = "2-я Пограничная дивизия НКВД"		
+		location = 11370
+		division_template = "Пограничная дивизия НКВД"		# NKVD -- older equipment, training
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}			
+	division= {			
+		name = "3-я Пограничная дивизия НКВД"		
+		location = 11202
+		division_template = "Пограничная дивизия НКВД"		# NKVD -- older equipment, training
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}			
+	division= {			
+		name = "8-я Пограничная дивизия НКВД"		
+		location = 306
+		division_template = "Пограничная дивизия НКВД"		# NKVD -- older equipment, training
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}			
+
+
+	#### Moskva Voennyii Okrug (Moscow Military District) -- Moscow ####
+	# 2ya Strelkoviy Korpus		
+	division= {			
+		name = "Московская Пролетарская мотострелк. див."		
+		location = 6380
+		division_template = "Мотострелковая дивизия"
+		start_experience_factor = 0.3
+	}			
+	division= {			
+		name = "6-я Орловская стрелк. див."		
+		location = 6380
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "49-я Стрелковая дивизия"		
+		location = 6380
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "Механизированная группа МВО"		
+		location = 6380
+		division_template = "Механизированный корпус"		# 3x Mekh Bge
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+
+	# 3ya Strelkoviy Korpus		
+	division= {			
+		name = "17-я Горьковская стрелк. див."		
+		location = 6262
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "19-я Воронежская стрелк. див."		
+		location = 6262
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "84-я Тульская стрелк. див."		
+		location = 6262
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+
+
+	### Moskva Gruppa Armiya (Moscow Army Group) -- Moscow ###		
+	# NKVD Moskva Gruppa -- NKVD Border Guard and RR units	
+	division= {			
+		name = "14-я Пограничная дивизия НКВД"		
+		location = 6380
+		division_template = "Пограничная дивизия НКВД"		# NKVD -- older equipment, training
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}			
+	division= {			
+		name = "17-я Пограничная дивизия НКВД"		
+		location = 6380
+		division_template = "Пограничная дивизия НКВД"		# NKVD -- older equipment, training
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}			
+	# Subordinate to AG
+	division= {			
+		name = "5-й Механизированный корпус"		
+		location = 6380
+		division_template = "Механизированный корпус"		# 2x Mekh Bge, 1x Mot Bge
+		start_experience_factor = 0.3
+	}
+
+
+	#### Ural'skii Voennyii Okrug (Urals Military District) -- Smolensk ####
+	# 10ya Strelkoviy Korpus		
+	division= {			
+		name = "14-я Криворожская стрелк. див."		
+		location = 11241
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "52-я Стрелковая дивизия"		
+		location = 11241
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "55-я Курская стрелк. див."		
+		location = 11241
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+
+	# Subordinate to VO
+	division= {			
+		name = "65-я Стрелковая дивизия"		
+		location = 306
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "82-я Стрелковая дивизия"		
+		location = 306
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "85-я Стрелковая дивизия"		
+		location = 306
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+
+	#### Volga Voennyii Okrug (Volga Military District) -- Hoymel (Gomel) ####
+	# 12ya Strelkoviy Korpus		
+	division= {			
+		name = "31-я Сталинградская стрелк. див."		
+		location = 9288
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "61-я Туркестанская стрелк. див."		
+		location = 9288
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "70-я Стрелковая дивизия"		
+		location = 9288
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+			
+	# 13ya Strelkoviy Korpus		
+	division= {			
+		name = "53-я Стрелковая дивизия"		
+		location = 3335
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "86-я Казанская стрелк. див."		
+		location = 3335
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	
+	# 16ya Strelkoviy Korpus		
+	division= {			
+		name = "4-я Смоленская стрелк. див."		
+		location = 11271
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "43-я Стрелковая дивизия"		
+		location = 11271
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "81-я Стрелковая дивизия"		
+		location = 11271
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+
+	# Subordinate to VO		
+	division= {			
+		name = "12-я Пограничная дивизия НКВД"		
+		location = 9288
+		division_template = "Пограничная дивизия НКВД"		# NKVD -- older equipment, training
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}			
+
+
+	##### Yugo-Zapadnaya Teatr VD (South West TVD) -- Kyiv, Dnipropetrovsk #####				
+	#### Kiev Voennyii Okrug (Kiev Military District) -- Kiev ####
+	# 8ya Strelkoviy Korpus		
+	division= {			
+		name = "24-я Самаро-Ульяновская стрелк. див."		
+		location = 215
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "46-я Стрелковая дивизия"		
+		location = 9554
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "58-я Горнострелковая дивизия"		
+		location = 9493
+		division_template = "Горнострелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division= {			
+		name = "99-я Стрелковая дивизия"		
+		location = 3470
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+
+	# 15ya Strelkoviy Korpus		
+	division= {			
+		name = "15-я Сивашская стрелк. див."		
+		location = 3511
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "51-я Перекопская стрелк. див."		
+		location = 6509
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "96-я Винницкая стрелк. див."		
+		location = 462
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+
+	# 1ya Kavaleriyskiy Korpus		
+	division= {			
+		name = "1-я Черниговская кав. див."		
+		location = 3430
+		division_template = "Кавалерийская дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division= {			
+		name = "3-я Бессарабская кав. див."		
+		location = 6455
+		division_template = "Кавалерийская дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+
+	# 2ya Kavaleriyskiy Korpus		
+	division= {			
+		name = "9-я Крымская кав. див."		
+		location = 525
+		division_template = "Кавалерийская дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division= {			
+		name = "31-я Кавалерийская дивизия"		
+		location = 525
+		division_template = "Кавалерийская дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+
+	# NKVD Kyiv Korpus -- NKVD Border Guard and RR units	
+	division= {			
+		name = "10-я Пограничная дивизия НКВД"		
+		location = 525
+		division_template = "Пограничная дивизия НКВД"		# NKVD -- older equipment, training
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}			
+	division= {			
+		name = "13-я Пограничная дивизия НКВД"		
+		location = 11561
+		division_template = "Пограничная дивизия НКВД"		# NKVD -- older equipment, training
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}			
+	division= {			
+		name = "15-я Пограничная дивизия НКВД"		
+		location = 11437
+		division_template = "Пограничная дивизия НКВД"		# NKVD -- older equipment, training
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}			
+
+	# Subordinate to VO
+	division= {			
+		name = "2-я Механизированная группа КВО"		
+		location = 525
+		division_template = "Механизированный корпус"		# 1x Tank Bge, 2x Mekh Bge
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+
+	# 6ya Strelkoviy Korpus		
+	division= {			
+		name = "7-я Черниговская стрелк. див."		
+		location = 9423
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "44-я Киевская стрелк. див."		
+		location = 9576
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "95-я Молдавская стрелк. див."		
+		location = 754
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division= {			
+		name = "1-я Механизированная группа КВО"		
+		location = 11670
+		division_template = "Механизированный корпус"		# 1x H Tank Bge, 2x Mekh Bge
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+
+	# 17ya Strelkoviy Korpus		
+	division= {			
+		name = "60-я Кавказская горнострелк. див."		
+		location = 741
+		division_template = "Горнострелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "62-я Туркестанская стрелк. див."		
+		location = 11670
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "100-я Стрелковая дивизия"		
+		location = 11670
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+
+	# 5ya Kavaleriyskiy Korpus		
+	division= {			
+		name = "5-я  Кав. див. имени Блинова"		
+		location = 11437
+		division_template = "Кавалерийская дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division= {			
+		name = "14-я  Бессарабская кав. див."		
+		location = 11437
+		division_template = "Кавалерийская дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+
+	# Subordinate to VO
+	division= {			
+		name = "45-й Механизированный корпус"		
+		location = 11437
+		division_template = "Механизированный корпус"		# 2x Mekh Bge, 1x Mot Bge
+		start_experience_factor = 0.3
+	}
+
+
+	#### Kharkov Voenniy Okrug (Kharkov Military District) -- Kharkov ####
+	# 7ya Strelkoviy Korpus		
+	division= {			
+		name = "3-я Крымская стрелк. див."		
+		location = 418
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "25-я Чапаевская стрелк. див."		
+		location = 418
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "30-я Иркутская стрелк. див."		
+		location = 418
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division= {			
+		name = "41-я Стрелковая дивизия"		
+		location = 418
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+
+	# 14ya Strelkoviy Korpus		
+	division= {			
+		name = "23-я Харьковская стрелк. див."		
+		location = 3580
+		division_template = "Горнострелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "75-я Стрелковая дивизия"		
+		location = 3580
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "80-я стрелк. див. Донбасс"		
+		location = 3580
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+
+	# Subordinate to VO
+	division= {			
+		name = "5-я Пограничная дивизия НКВД"		
+		location = 418
+		division_template = "Пограничная дивизия НКВД"		# NKVD -- older equipment, training
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}			
+
+
+	##### Blizhniy Vostok Teatr VD (Near East Theater) -- Astrakhan #####
+	#### Zakavkaz'e Voennyii Okrug (Transcaucasus Military District) -- Tblisi ####
+	### Batumi Gruppa Armiya -- Batumi ###		
+	# 15ya Kavaleriyskiy Korpus		
+	division= {			
+		name = "17-я Горно-Кавалерийская див."		
+		location = 3653
+		division_template = "Кавалерийская дивизия"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division= {			
+		name = "24-я Кавалерийская дивизия"		
+		location = 3653
+		division_template = "Кавалерийская дивизия"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+
+	# Subordinate to AG
+	division= {			
+		name = "9-я Кавказская горнострелк. див."		
+		location = 3656
+		division_template = "Горнострелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "20-я Кавказкая горнострелк. див."		
+		location = 6669
+		division_template = "Горнострелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "47-я Грузинская горнострелк. див."		
+		location = 12441
+		division_template = "Горнострелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+
+	### Tiblisi Gruppa Armiya -- Tiblisi ###		
+	# Subordinate to AG
+	division= {			
+		name = "63-я Грузинская горнострелк. див."		
+		location = 3564
+		division_template = "Горнострелковая дивизия"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "76-я Армянская горнострелк. див."		
+		location = 6997
+		division_template = "Горнострелковая дивизия"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "77-я Азербайджанская горнострелк. див."		
+		location = 4660
+		division_template = "Горнострелковая дивизия"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+
+	# Subordinate to VO
+	division= {			
+		name = "9-я Пограничная дивизия НКВД"		
+		location = 1599
+		division_template = "Пограничная дивизия НКВД"		# NKVD -- older equipment, training
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}			
+
+	#### Severniy Kavkaz Voennyii Okrug (North Caucasus Military District) -- Rostov na Don ####
+	# 9ya Territorial'niy Korpus
+	division= {			
+		name = "10-я Северного Края стрелк. див."		
+		location = 3686
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "13-я Дагестанская стрелк. див."		
+		location = 3686
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "22-я Краснодарская стрелк. див."		
+		location = 3686
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "74-я Таманская стрелк. див."		
+		location = 3734
+		division_template = "Стрелковая дивизия"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "38-я Донская стрелк. див."		
+		location = 3686
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+
+	# 7ya Kavaleriyskiy Korpus		
+	division= {			
+		name = "10-я Кавалерийская дивизия"		
+		location = 6474
+		division_template = "Кавалерийская дивизия"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division= {			
+		name = "12-я Кубанская кав. див."		
+		location = 6474
+		division_template = "Кавалерийская дивизия"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division= {			
+		name = "13-я Кубансая кав. див."		
+		location = 6474
+		division_template = "Кавалерийская дивизия"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division= {			
+		name = "15-я Донская кав. див."		
+		location = 6474
+		division_template = "Кавалерийская дивизия"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+
+	# Subordinate to AG
+	division= {			
+		name = "28-я Вятская горнострелк. див."		
+		location = 9417
+		division_template = "Горнострелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "11-я Пограничная дивизия НКВД"		
+		location = 9417
+		division_template = "Пограничная дивизия НКВД"		# NKVD -- older equipment, training
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}			
+
+	#### Tsentral'naya Aziya Voennyii Okrug (Central Asia Military District) -- Tashkent ####
+	# 9ya Kavaleriyskiy Korpus		
+	division= {			
+		name = "18-я Туркестанская кав. див."		
+		location = 12370
+		division_template = "Кавалерийская дивизия"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {			
+		name = "20-я Таджикская кав. див."		
+		location = 5062
+		division_template = "Кавалерийская дивизия"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {			
+		name = "21-я Ферганская кав. див."		
+		location = 4768
+		division_template = "Кавалерийская дивизия"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+
+	# Subordinate to AG
+	division= {			
+		name = "19-я Горно-Кавалерийская див."		
+		location = 1459
+		division_template = "Кавалерийская дивизия"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {			
+		name = "68-я  Туркестанская горнострелк. див."		
+		location = 4923
+		division_template = "Горнострелковая дивизия"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}			
+	division= {			
+		name = "83-я Туркестанская горнострелк. див."		
+		location = 12805
+		division_template = "Горнострелковая дивизия"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}			
+
+	# Subordinate to VO
+	division= {			
+		name = "16-я Пограничная дивизия НКВД"		
+		location = 1459
+		division_template = "Пограничная дивизия НКВД"		# NKVD -- older equipment, training
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}			
+
+
+	##### Dal'nevostochniy Teatr VD (Far Eastern TVD) -- Chita #####
+	#### Dal'niy Vostok Voennyii Okrug (Far Eastern Military District) -- Khabarovsk ####
+	# 18ya Strelkoviy Korpus
+	division= {			
+		name = "12-я  Амурская стрелк. див."		
+		location = 7763
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "21-я Пермская стрелк. див."		
+		location = 4725
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "26-я Златоустовская стрелк. див."		
+		location = 10655
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "32-я Саратовская стрелк. див."		
+		location = 7801
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+	division= {			
+		name = "39-я Тихоокеанская стрелк. див."		
+		location = 10722
+		division_template = "Стрелковая дивизия"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}			
+
+	# Kolkhoziy Korpus -- Collective Farm Corps
+	division= {			
+		name = "59-я Стрелковая дивизия"		
+		location = 6838
+		division_template = "Стрелковая дивизия"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}			
+	division= {			
+		name = "66-я Стрелковая дивизия"		
+		location = 3977
+		division_template = "Стрелковая дивизия"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}			
+	division= {			
+		name = "69-я Стрелковая дивизия"		
+		location = 11879
+		division_template = "Стрелковая дивизия"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}			
+
+	### Khaborovsk Gruppa Armiya -- Khabarovsk ###  		
+	# Subordinatre to AG
+	division= {			
+		name = "34-я Средне-Волжская стрелк. див."		
+		location = 12189
+		division_template = "Стрелковая дивизия"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}			
+	division= {			
+		name = "35-я Сибирская стрелк. див."		
+		location = 10466
+		division_template = "Стрелковая дивизия"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}			
+	division= {			
+		name = "40-я Богучарская стрелк. див."		
+		location = 11643
+		division_template = "Стрелковая дивизия"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}			
+	division= {			
+		name = "8-я Дальневосточная кав. див."		
+		location = 6686
+		division_template = "Кавалерийская дивизия"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {			
+		name = "Механизированный корпус ДВВО"		
+		location = 12189
+		division_template = "Механизированный корпус"		# 3x Mekh Bge
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+
+	# Subordinate to VO
+	division= {			
+		name = "6-я Пограничная дивизия НКВД"		
+		location = 957
+		division_template = "Пограничная дивизия НКВД"		# NKVD -- older equipment, training
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}			
+
+	#### Zabaikal'skii Voennyii Okrug (Transbaikal Military District) -- Argunsk ####
+	### Argunsk Gruppa Armiya ###		
+	# Subordinatre to AG
+	division= {			
+		name = "36-я Забайкальская стрелк. див."		
+		location = 4719
+		division_template = "Стрелковая дивизия"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}			
+	division= {			
+		name = "57-я Уральская стрелк. див."		
+		location = 12622
+		division_template = "Стрелковая дивизия"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}			
+	division= {			
+		name = "93-я Восточно-Сибирская стрелк. див."		
+		location = 10559
+		division_template = "Стрелковая дивизия"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}			
+
+	# Subordinate to VO
+	division= {			
+		name = "18-я Пограничная дивизия НКВД"		
+		location = 12641
+		division_template = "Пограничная дивизия НКВД"		# NKVD -- older equipment, training
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}			
+
+	#### Sibirskii Voennyii Okrug (Siberian Military District) -- Semipalatinsk ####
+	# Subordinatre to AG
+	division= {			
+		name = "71-я Стрелковая дивизия"		
+		location = 10610
+		division_template = "Стрелковая дивизия"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}			
+	division= {			
+		name = "73-я Стрелковая дивизия"		
+		location = 1749
+		division_template = "Стрелковая дивизия"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}			
+	division= {			
+		name = "78-я Стрелковая дивизия"		
+		location = 12529
+		division_template = "Стрелковая дивизия"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}			
+	division= {			
+		name = "94-я Стрелковая дивизия"		
+		location = 12662
+		division_template = "Стрелковая дивизия"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}			
+	division= {			
+		name = "7-я Пограничная дивизия НКВД"		
+		location = 1287
+		division_template = "Пограничная дивизия НКВД"		# NKVD -- older equipment, training
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}			
+
+
+	##### NAVAL UNITS #####
+	### Northern Fleet -- Murmansk
+	navy = {	
+		name = "Северый Флот"
+		base = 3134
+		location = 3134 # Murmansk
+		# 1ya Flotiliya Esmintsev
+		ship = { name = "Дзержинский" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Незаможник" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Петровкий" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Шаумян" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		# 2ya Flotiliya Esmintsev
+		ship = { name = "Изислав" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Калинин" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+	}	
+	navy = {	
+		name = "Северный Подводный Флот"
+		base = 3134
+		location = 3134 # Murmansk
+		# 5iy Podvodniy Flot
+		ship = { name = "Д-1" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Д-2" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Д-3" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Д-4" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Д-5" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Д-6" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+	}
+	
+	### Baltic Fleet -- Leningrad
+	navy = {	
+		name = "Балтийский Флот"
+		base = 3151
+		location = 3151 # Leningrad
+		ship = { name = "Марат" definition = battleship equipment = { battleship_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Октябрьская Революция" definition = battleship equipment = { battleship_1 = { amount = 1 owner = SOV } } }
+		# 3ya Flotiliya Esmintsev
+		ship = { name = "Энгельс" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Артём" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Володарский" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Яков Свердлов" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Фрунзе" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		# 4ya Flotiliya Esmintsev
+		ship = { name = "Ленин" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }		
+		ship = { name = "Войков" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }		
+		ship = { name = "Рыков" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }		
+		ship = { name = "Карл Либкнехн" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }		
+	}	
+	navy = {	
+		name = "Балтийский Подводный Флот"
+		base = 3151
+		location = 3151 # Leningrad
+		# 1iy Podvodniy Flot
+		ship = { name = "Щ-301" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Щ-302" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Щ-303" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Щ-304" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Щ-305" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Щ-306" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Щ-307" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Щ-308" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		# 2iy Podvodniy Flot
+		ship = { name = "Щ-113" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Щ-114" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Щ-115" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Щ-116" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		# 6iy Podvodniy Flot
+		ship = { name = "Щ-117" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Щ-118" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Щ-119" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Щ-120" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		# 7ij  Podvodniy Flot
+		ship = { name = "Щ-201" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Щ-202" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Щ-203" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Щ-204" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Щ-309" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+	}
+
+	### Black Sea Fleet -- Sevastopol
+	navy = {	
+		name = "Черноморский Флот"
+		base = 3686
+		location = 3686 # Sevastopopl
+		ship = { name = "Парижская Комунна" definition = battleship equipment = { battleship_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Красный Кавказ" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Красный Крым" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Червона Украина" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Коминтерн" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SOV } } }
+	}	
+	navy = {	
+		name = "Черноморский Подводный Флот"
+		base = 3686
+		location = 3686 # Sevastopopl
+		# 9iy Podvodniy Flot
+		ship = { name = "Щ-121" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Щ-122" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Щ-123" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Щ-124" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+	}	
+
+	### Pacific Fleet -- Vladivostok
+	navy = {	
+		name = "Тихоокеанский Флот"
+		base = 957
+		location = 957 # Vladivostok
+		# 8ya Flotiliya Esmintsev
+		ship = { name = "Урицкий" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Сталин" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+	}	
+	navy = {	
+		name = "Тихоокеанский Подводный Флот"
+		base = 957
+		location = 957 # Vladivostok
+		# 10iy Podvodniy Flot
+		ship = { name = "Щ-101" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Щ-102" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Щ-103" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Щ-104" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Щ-105" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Щ-106" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		# 11iy Podvodniy Flot
+		ship = { name = "Щ-107" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Щ-108" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Щ-109" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Щ-110" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Щ-111" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Щ-112" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+	}		
+}					
+
+### Air Wings
+air_wings = {
+	# ЛВО Aviatsya Komandovaniya -- Leningrad
+	195 = { 
+		# 15ya Istrebitel'nye Aviabrigada
+		fighter_equipment_0 = {
+			owner = "SOV" 
+			amount = 94
+		}
+		# 18ya Bombardirovochnye Aviabrigada
+		tac_bomber_equipment_0 =  {
+			owner = "SOV" 
+			amount = 60
+		}
+	}
+
+	# MVO Aviatsya Komandovaniya
+	219 = {
+		# 2ya Istrebitel'nye Aviabrigada
+		fighter_equipment_0 = {
+			owner = "SOV" 
+			amount = 94
+		}
+		# 3ya Dal'nyaya Bombardirovochnye Aviabrigada
+		# 13ya Dal'nyaya Bombardirovochnye Aviabrigada
+		strat_bomber_equipment_1 =  {
+			owner = "SOV" 
+			amount = 48
+		}
+		# TODO -- 46ya Transporta Aviabrigada -- transport planes
+	}
+
+	# BOVO Aviatsya Komandovaniya -- Minsk
+	206 = {
+		# 8ya Istrebitel'nye Aviabrigada
+		fighter_equipment_1 = {
+			owner = "SOV" 
+			amount = 94
+		}
+		# 14ya Istrebitel'nye Aviabrigada
+		fighter_equipment_0 = {
+			owner = "SOV" 
+			amount = 94
+		}
+		# 16ya Bombardirovochnye Aviabrigada
+		tac_bomber_equipment_0 =  {
+			owner = "SOV" 
+			amount = 60
+		}
+	}
+
+	# KOVO Aviatsya Komandovaniya -- Kiev
+	202 = {
+		# 17ya Istrebitel'nye Aviabrigada
+		fighter_equipment_1 = {
+			owner = "SOV" 
+			amount = 94
+		}
+		# 1ya Bombardirovochnye Aviabrigada
+		# 10ya Bombardirovochnye Aviabrigada
+		tac_bomber_equipment_0 =  {
+			owner = "SOV" 
+			amount = 120
+		}
+	}
+
+	# Dal'nevostochniy Aviatsya Komandovaniya -- Vladivostock	
+	408 = {
+		# 12ya Istrebitel'nye Aviabrigada
+		# 20ya Istrebitel'nye Aviabrigada
+		fighter_equipment_0 = {
+			owner = "SOV" 
+			amount = 188
+		}
+		# 5ya Dal'nyaya Bombardirovochnye Aviabrigada
+		strat_bomber_equipment_1 =  {
+			owner = "SOV" 
+			amount = 24
+		}
+	}
+
+	# VVS - KBF Aviatsya Komandovaniya -- Leningrad
+	195 = {
+		# 8ya VMF Aviabrigada
+		nav_bomber_equipment_1 = {
+			owner = "SOV" 
+			amount = 54
+		}
+	}
+	# VVS - BSF Aviatsya Komandovaniya -- Sevastopol
+	137 = {
+		# 4ya VMF Aviabrigada
+		nav_bomber_equipment_1 = {
+			owner = "SOV" 
+			amount = 54
+		}
+	}
+}
+
+
+		
+	#########################
+	## STARTING PRODUCTION ##
+	#########################
+instant_effect = {
+	
+
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "SOV"
+		}
+		requested_factories = 7
+		progress = 0.1
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "SOV" 
+		}
+		requested_factories = 2
+		progress = 0.3
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "SOV" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = light_tank_equipment_1
+			creator = "SOV" 
+		}
+		requested_factories = 3
+		progress = 0.4
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = "SOV" 
+		}
+		requested_factories = 3
+		progress = 0.4
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = fighter_equipment_1
+			creator = "SOV" 
+		}
+		requested_factories = 1
+		progress = 0.15
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = strat_bomber_equipment_1
+			creator = "SOV" 
+		}
+		requested_factories = 1
+		progress = 0.2
+		efficiency = 50
+	}
+
+	### Ships Under Construction Notes ###
+	# DD: Leningrad & Minsk variant (x4) ("Leningrad" "Moskva" "Kharkov" "Minsk")
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_1
+			creator = "SOV"
+			version_name = "Тип «Ленинград»"
+		}
+		requested_factories = 2
+		progress = 0.70
+		amount = 4
+	}
+	# SS: Shchuka class (x29) ("Щ-125" "Щ-205" "Щ-206" "Щ-207" "Щ-310" "Щ-311" "Щ-126" "Щ-127" "Щ-128" "Щ-129" "Щ-130" "Щ-131" "Щ-132" "Щ-133" 
+	#		"Щ-134" "Щ-208" "Щ-312" "Щ-313" "Щ-314" "Щ-315" "Щ-316" "Щ-317" "Щ-318" "Щ-319" "Щ-320" "Щ-321" "Щ-322" "Щ-323" "Щ-324")
+	# SS: Stalinets class (x2) ("S-1" "S-2")
+	add_equipment_production = {
+		equipment = {
+			type = submarine_2
+			creator = "SOV"
+			version_name =  "«Средняя», серия IX"
+		}
+		requested_factories = 1
+		progress = 0.80
+		amount = 11
+	}
+	add_equipment_production = {
+		equipment = {
+			type = submarine_2
+			creator = "SOV"
+			version_name =  "«Средняя», серия IX"
+		}
+		requested_factories = 1
+		progress = 0.80
+		amount = 10
+	}
+	add_equipment_production = {
+		equipment = {
+			type = submarine_2
+			creator = "SOV"
+			version_name =  "«Средняя», серия IX"
+		}
+		requested_factories = 1
+		progress = 0.80
+		amount = 10
+	}
+}
+	#####################
